@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#E6E6E6"
@@ -9,51 +10,57 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/app_bar_main">
 
+
+
+
+<LinearLayout
+    android:background="@drawable/gradient1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <TextView
+        android:textColor="#000"
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_margin="3mm"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:text="TOP TRENDING COURSES"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_creator="@+id/viewPager"/>
+        android:text="TOP TRENDING COURSES" />
 
     <android.support.v4.view.ViewPager
+        android:background="#022196F3"
         android:id="@+id/viewPager"
-        android:layout_width="380dp"
-        android:layout_height="160dp"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
         android:layout_gravity="center"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:foregroundGravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:foregroundGravity="center" />
 
-    <LinearLayout
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager">
+        android:gravity="center"
+        android:text="Important Features for Cyberaegis."
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -63,74 +70,80 @@
             <android.support.v7.widget.CardView
                 android:layout_width="175dp"
                 android:layout_height="175dp"
-                tools:layout_editor_absoluteX="209dp"
-                tools:layout_editor_absoluteY="464dp"
                 android:layout_marginLeft="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginBottom="5dp"
+                tools:layout_editor_absoluteX="209dp"
+                tools:layout_editor_absoluteY="464dp">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <android.support.v7.widget.AppCompatImageView
                         android:id="@+id/ci1"
                         android:layout_width="71dp"
                         android:layout_height="66dp"
                         android:src="@drawable/ci1" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_marginLeft="5dp"
                         android:text="Classroom Training"
-                        android:textSize="18dp"
                         android:textColor="#000"
-                        android:textStyle="bold|italic"
-                        />
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#000"
                         android:layout_marginLeft="5dp"
+                        android:text="We have the best faculty with excellent Lab Infrastructure along with detailed course material."
                         android:textAlignment="textStart"
-                        android:text="We have the best faculty with excellent Lab Infrastructure along with detailed course material."></TextView>
+                        android:textColor="#000"></TextView>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
                 android:layout_width="175dp"
                 android:layout_height="175dp"
-                tools:layout_editor_absoluteX="26dp"
-                tools:layout_editor_absoluteY="278dp"
                 android:layout_marginLeft="9dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginTop="20dp">
+                android:layout_marginBottom="5dp"
+                tools:layout_editor_absoluteX="26dp"
+                tools:layout_editor_absoluteY="278dp">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <android.support.v7.widget.AppCompatImageView
                         android:id="@+id/ci2"
                         android:layout_width="71dp"
                         android:layout_height="66dp"
                         android:src="@drawable/ci2" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_marginLeft="5dp"
                         android:text="Corporate Training"
-                        android:textSize="18dp"
                         android:textColor="#000"
-                        android:textStyle="bold|italic"
-                        />
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#000"
                         android:layout_marginLeft="5dp"
+                        android:text="We have experienced faculty to train professionals for improving their skills."
                         android:textAlignment="textStart"
-                        android:text="We have experienced faculty to train professionals for improving their skills."/>
+                        android:textColor="#000" />
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -145,49 +158,53 @@
             <android.support.v7.widget.CardView
                 android:layout_width="175dp"
                 android:layout_height="175dp"
-                tools:layout_editor_absoluteX="26dp"
-                tools:layout_editor_absoluteY="464dp"
                 android:layout_marginLeft="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginBottom="5dp"
+                tools:layout_editor_absoluteX="26dp"
+                tools:layout_editor_absoluteY="464dp">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <android.support.v7.widget.AppCompatImageView
                         android:id="@+id/ci3"
                         android:layout_width="71dp"
                         android:layout_height="66dp"
                         android:src="@drawable/ci3" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_marginLeft="5dp"
                         android:text="Online Training"
-                        android:textSize="18dp"
                         android:textColor="#000"
-                        android:textStyle="bold|italic"
-                        />
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#000"
                         android:layout_marginLeft="5dp"
+                        android:text="We offer most of the course online with virtual classroom to serve the IT aspirants."
                         android:textAlignment="textStart"
-                        android:text="We offer most of the course online with virtual classroom to serve the IT aspirants."></TextView>
+                        android:textColor="#000"></TextView>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
                 android:layout_width="175dp"
                 android:layout_height="175dp"
-                tools:layout_editor_absoluteX="209dp"
-                tools:layout_editor_absoluteY="278dp"
                 android:layout_marginLeft="9dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginTop="20dp">
+                android:layout_marginBottom="5dp"
+                tools:layout_editor_absoluteX="209dp"
+                tools:layout_editor_absoluteY="278dp">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -198,27 +215,212 @@
                         android:layout_width="71dp"
                         android:layout_height="66dp"
                         android:src="@drawable/ci4" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_marginLeft="5dp"
                         android:text="Weekend Batches"
-                        android:textSize="18dp"
                         android:textColor="#000"
-                        android:textStyle="bold|italic"
-                        />
+                        android:textSize="18dp"
+                        android:textStyle="bold|italic" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#000"
                         android:layout_marginLeft="5dp"
+                        android:text="Training programs are conducted on Saturdays and Sundays for full day, usually 10am to 05pm."
                         android:textAlignment="textStart"
-                        android:text="Training programs are conducted on Saturdays and Sundays for full day, usually 10am to 05pm."/>
+                        android:textColor="#000" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
+
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="131dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/training" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="131dp"
+                app:cardBackgroundColor="#1484D5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="TRAINING"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Software training and development is our core area of expertise where we have been serving various industries."
+                        android:textColor="#fff"
+                        android:textSize="13dp"
+                        android:textStyle="italic" />
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button1"
+                        android:gravity="center"
+                        android:text="READ MORE"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="131dp"
+                app:cardBackgroundColor="#FF9800">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="INTERNSHIPS"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:text="Cyberaegis provides training and experiential learing oppurtunities for the development of skills in assesment .."
+                        android:textColor="#fff"
+                        android:textSize="13dp"
+                        android:textStyle="italic" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button2"
+                        android:gravity="center"
+                        android:text="READ MORE"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="131dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/internhips" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="131dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/workshops" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="131dp"
+                app:cardBackgroundColor="#1484D5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:text="WORKSHOPS"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Cyberaegis conducts the workshops to raise awareness and facilitate active learning oppurtunities"
+                        android:textColor="#fff"
+                        android:textSize="13dp"
+                        android:textStyle="italic" />
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button1"
+                        android:gravity="center"
+                        android:text="READ MORE"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+</ScrollView>
