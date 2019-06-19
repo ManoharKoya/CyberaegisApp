@@ -10,9 +10,6 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-
-
-
 <LinearLayout
     android:background="@drawable/gradient1"
     android:layout_width="match_parent"
@@ -418,6 +415,13 @@
             </android.support.v7.widget.CardView>
         </LinearLayout>
     </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager_2"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="80dp"/>
 
 </LinearLayout>
 
