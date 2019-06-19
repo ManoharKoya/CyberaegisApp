@@ -17,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -24,11 +25,13 @@ import java.util.TimerTask;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    ViewPager vpg;
+    ViewPager vpg,vpg_2;
     SliderAdapter adapter;
+    TestimonialAdapter adapter_2;
     ImageView i1,i2;
-    private Timer timer;
-    private int CurPosition=0;
+    TextView t1,t2;
+    private Timer timer,timer_2;
+    private int CurPosition=0,CurPosition_2=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +61,34 @@ public class MainActivity extends AppCompatActivity
         adapter = new SliderAdapter(this);
         vpg.setAdapter(adapter);
         slideShow();
+
+        vpg_2 = findViewById(R.id.viewPager_2);
+        t1 = findViewById(R.id.desc);
+        t2 = findViewById(R.id.name);
+        adapter_2 = new TestimonialAdapter(this);
+        vpg_2.setAdapter(adapter_2);
+        slideShow_2();
+
     }
+
+    public void slideShow_2(){
+        final Handler handle1 = new Handler();
+        final Runnable runable1 = new Runnable() {
+            @Override
+            public void run() {
+                if (CurPosition_2 == 3) CurPosition_2 = 0;
+                vpg_2.setCurrentItem(CurPosition_2++, true);
+            }
+        };
+        timer_2 = new Timer();
+        timer_2.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handle1.post(runable1);
+            }
+        }, 350, 3500 );
+    }
+
 
     public void slideShow(){
         final Handler handle = new Handler();
