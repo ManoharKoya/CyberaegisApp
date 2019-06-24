@@ -1,13 +1,10 @@
 package com.example.cyberaegisapp;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.CardView;
-import android.view.InflateException;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -18,31 +15,21 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.ArrayList;
+import java.util.List;
 
-public class MainActivity extends AppCompatActivity
+public class OnlineCourses extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    ViewPager vpg,vpg_2;
-    SliderAdapter adapter;
-    TestimonialAdapter adapter_2;
-    ImageView i1,i2;
-    TextView t1,t2;
-    LinearLayout cd,cd1;
-
-    private Timer timer,timer_2;
-    private int CurPosition=0,CurPosition_2=0;
+    private   RecyclerView recyclerView;
+    private Course_Adapter adapter;
+    private List<Course_row_parts> course_list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_online_courses);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -61,78 +48,25 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-         cd = (LinearLayout) findViewById(R.id.cd3);
-         cd.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 startActivity(new Intent(v.getContext(),OnlineCourses.class));
-             }
-         });
 
-        cd1 = (LinearLayout) findViewById(R.id.cd1);
-        cd1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(v.getContext(),ClassroomCourses.class));
-            }
-        });
+        course_list=new ArrayList<>();
+        recyclerView=(RecyclerView)findViewById(R.id.recyclerview);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        course_list.add(new com.example.cyberaegisapp.Course_row_parts("Manual Testing","Manual testing is the process of using the functions and features of an application...",R.drawable.manual_testing));
+        course_list.add(new com.example.cyberaegisapp.Course_row_parts("Advanced Java","Advanced Java comprises the very complex advanced programming like Swings,....",R.drawable.advanced_java));
+        course_list.add(new com.example.cyberaegisapp.Course_row_parts("Android Web Services","A web service is a standard for exchanging information...",R.drawable.aws));
+        course_list.add(new com.example.cyberaegisapp.Course_row_parts("C-Programming","C language is a low level language...",R.drawable.c_language));
+        course_list.add(new com.example.cyberaegisapp.Course_row_parts("Linux Administrator","A linux system administrator is a person who is responsible for the configuration,...",R.drawable.linux));
+        course_list.add(new com.example.cyberaegisapp.Course_row_parts("Machine Learning","Machine learning  provides systems the ability to automatically learn and...",R.drawable.machine_learing));
+        course_list.add(new com.example.cyberaegisapp.Course_row_parts("Salesforce CRM ","Salesforce is a cloud-based customer relationship management (CRM) platform...",R.drawable.salesforce_development));
+        course_list.add(new com.example.cyberaegisapp.Course_row_parts("SAP","The master data is used to create transactional data in SAP...",R.drawable.sap_mm));
+        adapter=new Course_Adapter(this,course_list);
+        recyclerView.setAdapter(adapter);
 
-
-        vpg = findViewById(R.id.viewPager);
-        i1 = findViewById(R.id.image);
-        i2 = findViewById(R.id.image1);
-        adapter = new SliderAdapter(this);
-        vpg.setAdapter(adapter);
-        slideShow();
-
-        vpg_2 = findViewById(R.id.viewPager_2);
-        t1 = findViewById(R.id.desc);
-        t2 = findViewById(R.id.name);
-        adapter_2 = new TestimonialAdapter(this);
-        vpg_2.setAdapter(adapter_2);
-        slideShow_2();
 
     }
-
-
-
-    public void slideShow_2(){
-        final Handler handle1 = new Handler();
-        final Runnable runable1 = new Runnable() {
-            @Override
-            public void run() {
-                if (CurPosition_2 == 3) CurPosition_2 = 0;
-                vpg_2.setCurrentItem(CurPosition_2++, true);
-            }
-        };
-        timer_2 = new Timer();
-        timer_2.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                handle1.post(runable1);
-            }
-        }, 350, 3500 );
-    }
-
-
-    public void slideShow(){
-        final Handler handle = new Handler();
-        final Runnable runable = new Runnable() {
-            @Override
-            public void run() {
-                if (CurPosition == 11) CurPosition = 0;
-                vpg.setCurrentItem(CurPosition++, true);
-            }
-        };
-        timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                handle.post(runable);
-            }
-        }, 250, 2500 );
-        }
 
     @Override
     public void onBackPressed() {
@@ -147,7 +81,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.online_courses, menu);
         return true;
     }
 
@@ -173,7 +107,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-//            startActivity(new Intent(this,MainActivity.class));
+            // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {

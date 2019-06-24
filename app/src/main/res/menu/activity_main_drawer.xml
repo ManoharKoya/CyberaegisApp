@@ -21,9 +21,9 @@
             android:icon="@drawable/ic_library_books_black_24dp"
             android:title="Blog" />
         <item
-            android:id="@+id/Clients"
+            android:id="@+id/Login"
             android:icon="@drawable/ic_insert_emoticon_black_24dp"
-            android:title="Clients" />
+            android:title="Login" />
         <item
             android:id="@+id/Training"
             android:icon="@drawable/ic_menu_manage"
