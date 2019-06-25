@@ -17,4 +17,6 @@
     <string name="menu_send">Send</string>
     <string name="title_activity_online_courses">OnlineCourses</string>
     <string name="title_activity_classroom_courses">ClassroomCourses</string>
+    <string name="title_activity_login">login</string>
+    <string name="title_activity_signup">signup</string>
 </resources>
