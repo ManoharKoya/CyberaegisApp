@@ -176,8 +176,8 @@ public class MainActivity extends AppCompatActivity
 //            startActivity(new Intent(this,MainActivity.class));
         } else if (id == R.id.Login) {
             startActivity(new Intent(this,login.class));
-        } else if (id == R.id.nav_slideshow) {
-
+        } else if (id == R.id.nav_contactUs) {
+            startActivity(new Intent(this,ContactUs.class));
         } else if (id == R.id.nav_tools) {
 
         } else if (id == R.id.nav_share) {

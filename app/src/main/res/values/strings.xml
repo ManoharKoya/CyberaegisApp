@@ -19,4 +19,7 @@
     <string name="title_activity_classroom_courses">ClassroomCourses</string>
     <string name="title_activity_login">login</string>
     <string name="title_activity_signup">signup</string>
+    <string name="title_activity_contact_us">ContactUs</string>
+    <string name="title_activity_locate_us">LocateUs</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
