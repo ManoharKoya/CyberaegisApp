@@ -87,9 +87,9 @@ public class login extends AppCompatActivity
             startActivity(new Intent(this,MainActivity.class));
         } else if (id == R.id.Login) {
             startActivity(new Intent(this,login.class));
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_tools) {
+        } else if (id == R.id.nav_dashboard) {
+            startActivity(new Intent(this,Dashboard.class));
+        }else if (id == R.id.nav_tools) {
 
         } else if (id == R.id.nav_share) {
 
