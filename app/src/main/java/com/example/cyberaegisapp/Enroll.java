@@ -15,13 +15,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
-public class ContactUs extends AppCompatActivity
+public class Enroll extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact_us);
+        setContentView(R.layout.activity_enroll);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -54,7 +54,7 @@ public class ContactUs extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.contact_us, menu);
+        getMenuInflater().inflate(R.menu.enroll, menu);
         return true;
     }
 
@@ -86,7 +86,7 @@ public class ContactUs extends AppCompatActivity
         } else if (id == R.id.nav_dashboard) {
             startActivity(new Intent(this,Dashboard.class));
         } else if (id == R.id.Enroll) {
-            startActivity(new Intent(this,Enroll.class));
+            startActivity(new Intent(this, Enroll.class));
         } else if (id == R.id.nav_contactUs) {
             startActivity(new Intent(this, ContactUs.class));
         } else if (id == R.id.nav_send) {

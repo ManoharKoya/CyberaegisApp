@@ -25,13 +25,16 @@
     <string name="title_activity_dashboard">Dashboard</string>
 
     <string name="courses">Courses</string>
-<string name="quizzes">Quizzes</string>
-<string name="mydashboard">My Dashboard</string>
-<string name="profile">Profile</string>
-<string name="notes">Notes</string>
-<string name="doubts">Doubts</string>
-<string name="friends">Friends</string>
-<string name="attendance">Attendance</string>
-<string name="courses_that_you_are_registered_in">Courses that you are registered in</string>
-<string name="todo">TODO</string>
+    <string name="quizzes">Quizzes</string>
+    <string name="mydashboard">My Dashboard</string>
+    <string name="profile">Profile</string>
+    <string name="notes">Notes</string>
+    <string name="doubts">Doubts</string>
+    <string name="friends">Friends</string>
+    <string name="attendance">Attendance</string>
+    <string name="courses_that_you_are_registered_in">Courses that you are registered in</string>
+    <string name="todo">TODO</string>
+    <string name="title_activity_enroll">Enroll</string>
+
+    <string name="enroll">Enroll</string>
 </resources>

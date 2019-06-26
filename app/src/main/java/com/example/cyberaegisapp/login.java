@@ -89,10 +89,10 @@ public class login extends AppCompatActivity
             startActivity(new Intent(this,login.class));
         } else if (id == R.id.nav_dashboard) {
             startActivity(new Intent(this,Dashboard.class));
-        }else if (id == R.id.nav_tools) {
-
-        } else if (id == R.id.nav_share) {
-
+        } else if (id == R.id.Enroll) {
+            startActivity(new Intent(this, Enroll.class));
+        } else if (id == R.id.nav_contactUs) {
+            startActivity(new Intent(this, ContactUs.class));
         } else if (id == R.id.nav_send) {
 
         }
