@@ -15,4 +15,6 @@
     <color name="green">#00bfa5</color>
     <color name="pinkAccent">#ff4081</color>
     <color name="text_shadow">#c45603</color>
+    <color name="blockColor">#ffffff</color>
+    <color name="title_color">#000000</color>
 </resources>

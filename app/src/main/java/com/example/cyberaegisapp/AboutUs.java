@@ -14,14 +14,17 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.Button;
+import android.widget.TextView;
 
-public class login extends AppCompatActivity
+public class AboutUs extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_about_us);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -39,10 +42,30 @@ public class login extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        TextView mMessageWindow = (TextView) findViewById(R.id.messageWindow);
+        StringBuilder stringBuilder = new StringBuilder();
+        String someMessage = "Cyberaegis is established with the aim of providing interactive learning of essential IT related courses and Job support on various technologies to all Working/Non Managing Candidates throughout USA, UAE, UK, Canada, Saudi Arabia, New Zealand, South Africa,India and Many Other Countries. We provide training by a Real Time Professionals. We are driven by our belief in the potential of new technologies to enrich the world We are convinced that we can leverage these technologies to help individuals add more value to their career and allow us to synergistically grow together. We meet student needs in training and job oriented requirements on IT training. We also offer good quality tips to improve acquaintance more in the software training Courses & Computer IT Training at online to contend with today competitive software world." +
+                "We train the students in different modes of directions to be the paramount in the online software training field as to make them finest amongst with latest technology. We have highly practiced and proficient faculty to polish the trainees in a contemporary manner to amplify their style of learning and grabbing the existing issues as fine as that helps them to grow intelligent in this field.";
+        stringBuilder.append(someMessage);
+        mMessageWindow.setText(stringBuilder.toString());
+
+        button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v)  {
+                openContactUs();
+            }
+        });
+
+
     }
 
-    public void btn_signupform(View view) {
-        startActivity(new Intent(getApplicationContext(),signup.class));
+    public void openContactUs()
+    {
+        Intent intent = new Intent(this, ContactUs.class);
+        startActivity(intent);
     }
 
     @Override
@@ -58,7 +81,7 @@ public class login extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.login, menu);
+        getMenuInflater().inflate(R.menu.about_us, menu);
         return true;
     }
 
@@ -90,10 +113,10 @@ public class login extends AppCompatActivity
         } else if (id == R.id.nav_dashboard) {
             startActivity(new Intent(this,Dashboard.class));
         } else if (id == R.id.Enroll) {
-            startActivity(new Intent(this, Enroll.class));
+            startActivity(new Intent(this,Enroll.class));
         } else if (id == R.id.nav_contactUs) {
             startActivity(new Intent(this, ContactUs.class));
-        }else if (id == R.id.nav_AboutUS) {
+        }  else if (id == R.id.nav_AboutUS) {
             startActivity(new Intent(this,AboutUs.class));
         }
 

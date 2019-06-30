@@ -89,8 +89,8 @@ public class Enroll extends AppCompatActivity
             startActivity(new Intent(this, Enroll.class));
         } else if (id == R.id.nav_contactUs) {
             startActivity(new Intent(this, ContactUs.class));
-        } else if (id == R.id.nav_send) {
-
+        } else if (id == R.id.nav_AboutUS) {
+            startActivity(new Intent(this,AboutUs.class));
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
