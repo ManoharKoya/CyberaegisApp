@@ -9,11 +9,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 public class Course_Adapter extends RecyclerView.Adapter<Course_Adapter.Course_viewholder>{
 
     private Context context;
     private List<com.example.cyberaegisapp.Course_row_parts> course_list;
+
 
     public Course_Adapter(Context context, List<com.example.cyberaegisapp.Course_row_parts> course_list) {
         this.context = context;
@@ -39,6 +42,7 @@ public class Course_Adapter extends RecyclerView.Adapter<Course_Adapter.Course_v
         holder.course_desc.setText(course.getCourse_description());
         holder.imageView.setImageDrawable(context.getResources().getDrawable(course.getImage()));
 
+
     }
 
     @Override
@@ -49,6 +53,8 @@ public class Course_Adapter extends RecyclerView.Adapter<Course_Adapter.Course_v
     class Course_viewholder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView course_title,course_desc;
+
+
         public Course_viewholder(@NonNull View itemView) {
             super(itemView);
 
@@ -58,5 +64,8 @@ public class Course_Adapter extends RecyclerView.Adapter<Course_Adapter.Course_v
 
 
         }
-    }
+
+
+        }
+
 }

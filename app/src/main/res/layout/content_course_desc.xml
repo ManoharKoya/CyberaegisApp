@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/datascience_775_x_330"
+                android:contentDescription="TODO" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img"
+                android:layout_marginTop="18dp"
+                android:text="@string/data_science_and_analytic"
+                android:typeface="sans"
+                android:layout_centerHorizontal="true"
+                android:elevation="10dp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:id="@+id/tv"/>
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv"
+                android:layout_alignLeft="@id/img"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/_64hrs_36hrs"
+                android:typeface="sans"
+                android:background="@drawable/textviewborders"
+                android:textColor="#000000"
+                android:paddingStart="5dp"
+                android:textSize="16sp"
+                android:paddingEnd="8dp"
+                android:drawableStart="@drawable/ic_launcher_foreground"
+                android:layout_alignStart="@id/img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv"
+                android:layout_toEndOf="@id/tv2"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="35dp"
+                android:textSize="16sp"
+                android:background="@drawable/textviewborders"
+                android:text="@string/_1300_enrolled"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:paddingEnd="8dp"
+                android:typeface="sans"
+
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/taught_by_teacher_name"
+                android:layout_below="@id/tv2"
+                android:layout_marginStart="35dp"
+                android:id="@+id/tv3"
+                android:textSize="16sp"
+                android:layout_marginTop="35dp"
+                android:textColor="#000000"
+                android:background="@drawable/textviewborders"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:paddingEnd="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/certification_available"
+                android:textColor="#000000"
+                android:paddingEnd="8dp"
+                android:background="@drawable/textviewborders"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:layout_below="@id/tv3"
+                android:layout_marginLeft="35dp"
+                android:textSize="16sp"
+                android:typeface="sans"
+                android:layout_marginTop="35dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img"
+                android:text="ENROLL"
+                android:typeface="sans"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/buttonenroll"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:elevation="10dp"/>
+
+        </RelativeLayout>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardElevation="15dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/this_course_includes"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:typeface="sans"
+                    android:padding="10dp"
+                    android:textSize="18sp"/>
+
+                <com.borjabravo.readmoretextview.ReadMoreTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:padding="10dp"
+                    android:text="@string/_1_introduction_to_data_sciences"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:typeface="sans"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:colorClickableText="@android:color/holo_blue_light"
+                    app:trimCollapsedText="Show less"
+                    app:trimExpandedText="Show more"
+                    app:trimLength="85"
+                    app:trimMode="trimModeLength" />
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardElevation="15dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:typeface="sans"
+                    android:padding="10dp"
+                    android:textSize="18sp"
+                    />
+                <com.borjabravo.readmoretextview.ReadMoreTextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/data_science_is_a_field_of_big_data_geared_toward_providing_meaningful_information_based_on_large_amounts_of_complex_data_data_science_or_data_driven_science_combines_different_fields_of_work_in_statistics_and_computation_in_order_to_interpret_data_for_the_purpose_of_decision_making"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:trimExpandedText="Show more"
+                    app:trimCollapsedText="Show less"
+                    app:trimMode="trimModeLength"
+                    app:trimLength="125"
+                    android:typeface="sans"
+                    app:colorClickableText="@android:color/holo_blue_light"
+                    />
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardElevation="15dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/basic"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:typeface="sans"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/prereq"
+                    android:textColor="#000000"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textSize="16sp"
+                    android:typeface="sans" />
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardElevation="15dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="20dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/curriculum"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:typeface="sans"
+                android:textSize="18sp"/>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardElevation="15dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="10dp"
+            >
+            <com.ms.square.android.expandabletextview.ExpandableTextView
+                xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/expand_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                expandableTextView:maxCollapsedLines="2"
+                expandableTextView:animDuration="200"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intro"
+                    android:textSize="16sp"
+                    android:typeface="sans"
+                    android:padding="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="#000000"/>
+                <ImageButton
+                    android:id="@id/expand_collapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:layout_gravity="right|bottom"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="TODO" />
+            </com.ms.square.android.expandabletextview.ExpandableTextView>
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardElevation="15dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="10dp"
+            >
+            <com.ms.square.android.expandabletextview.ExpandableTextView
+                xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/expand_text_view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                expandableTextView:maxCollapsedLines="2"
+                expandableTextView:animDuration="200"
+                >
+
+
+                <TextView
+                    android:id="@id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intro"
+                    android:textSize="16sp"
+                    android:typeface="sans"
+                    android:padding="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="#000000"/>
+                <ImageButton
+                    android:id="@id/expand_collapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:layout_gravity="right|bottom"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="TODO" />
+            </com.ms.square.android.expandabletextview.ExpandableTextView>
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardElevation="15dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="10dp"
+            >
+            <com.ms.square.android.expandabletextview.ExpandableTextView
+                xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/expand_text_view2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                expandableTextView:maxCollapsedLines="2"
+                expandableTextView:animDuration="200"
+                >
+
+
+                <TextView
+                    android:id="@id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intro"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:typeface="sans"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="#000000"/>
+                <ImageButton
+                    android:id="@id/expand_collapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:layout_gravity="right|bottom"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="TODO" />
+            </com.ms.square.android.expandabletextview.ExpandableTextView>
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardElevation="15dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="10dp"
+            >
+            <com.ms.square.android.expandabletextview.ExpandableTextView
+                xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/expand_text_view3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                expandableTextView:maxCollapsedLines="2"
+                expandableTextView:animDuration="200"
+                >
+
+
+                <TextView
+                    android:id="@id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intro"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:typeface="sans"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="#000000"/>
+                <ImageButton
+                    android:id="@id/expand_collapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:layout_gravity="right|bottom"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="TODO" />
+            </com.ms.square.android.expandabletextview.ExpandableTextView>
+        </android.support.v7.widget.CardView>
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardElevation="15dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="20dp"
+            >
+            <com.ms.square.android.expandabletextview.ExpandableTextView
+                xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/expand_text_view4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                expandableTextView:maxCollapsedLines="2"
+                expandableTextView:animDuration="200"
+                >
+
+
+                <TextView
+                    android:id="@id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intro"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:typeface="sans"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="#000000"/>
+                <ImageButton
+                    android:id="@id/expand_collapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:layout_gravity="right|bottom"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="TODO" />
+            </com.ms.square.android.expandabletextview.ExpandableTextView>
+        </android.support.v7.widget.CardView>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ENROLL"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/buttonenroll"
+            android:layout_marginStart="10dp"
+            android:typeface="sans"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/addtocart"
+            android:textColor="#18FFFF"
+            android:background="@drawable/addtocart"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="16dp"
+            android:typeface="sans"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:elevation="10dp"/>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

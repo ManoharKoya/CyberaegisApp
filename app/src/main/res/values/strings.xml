@@ -38,4 +38,21 @@
 
     <string name="enroll">Enroll</string>
     <string name="title_activity_about_us">AboutUs</string>
+    <string name="title_activity_course_desc">CourseDesc</string>
+
+    <string name="data_science_and_analytic">Data Science and analytic</string>
+    <string name="_1300_enrolled">1300 enrolled</string>
+    <string name="taught_by_teacher_name">Taught by teacher name</string>
+
+    <string name="this_course_includes">This course includes</string>
+    <string name="_1_introduction_to_data_sciences">1).  Introduction to data sciences.\n\n2).  Business statistics.\n\n3).  Introduction to R.\n\n4).  Exploratory Data analysis and visualization.\n\n5).  Introduction to python.\n\n6).  Decision trees.\n\n7).  Practical use cases and best practices. </string>
+    <string name="certification_available">Certification available</string>
+    <string name="_64hrs_36hrs">64hrs+36hrs</string>
+    <string name="description">Description</string>
+    <string name="data_science_is_a_field_of_big_data_geared_toward_providing_meaningful_information_based_on_large_amounts_of_complex_data_data_science_or_data_driven_science_combines_different_fields_of_work_in_statistics_and_computation_in_order_to_interpret_data_for_the_purpose_of_decision_making">Data science is a field of Big Data geared toward providing meaningful information based on large amounts of complex data. Data science, or data-driven science, combines different fields of work in statistics and computation in order to interpret data for the purpose of decision making.</string>
+    <string name="basic">Basic Requirement</string>
+    <string name="prereq">1).  Any version of python installed.\n\n2).  Basic programming knowledge.\n\n3).  Basic knowledge in mathematical statistics. </string>
+    <string name="curriculum">Curriculum</string>
+    <string name="intro">Introduction to Python:\n\n1)</string>
+    <string name="addtocart">Add to Cart</string>
 </resources>

@@ -28,7 +28,7 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    DatabaseHelper myDb;
     ViewPager vpg,vpg_2;
     SliderAdapter adapter;
     TestimonialAdapter adapter_2;
@@ -53,6 +53,9 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+
+        myDb = new DatabaseHelper(this);
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -166,6 +169,7 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -184,6 +188,8 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(this, Enroll.class));
         } else if (id == R.id.nav_AboutUS) {
             startActivity(new Intent(this,AboutUs.class));
+        } else if (id==R.id.CourseDesc){
+            startActivity(new Intent(this,CourseDesc.class));
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

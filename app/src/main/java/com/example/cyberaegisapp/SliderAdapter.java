@@ -1,6 +1,7 @@
 package com.example.cyberaegisapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.widget.LinearLayoutCompat;
@@ -50,8 +51,17 @@ public class SliderAdapter extends PagerAdapter {
         imgV1.setImageResource(image_res[position+1]);
         //txtV.setText("Image : "+position);
         container.addView(item_view);
+
+        imgV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ctx.startActivity(new Intent(v.getContext(),CourseDesc.class));
+            }
+        });
+
         return item_view;
     }
+
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {

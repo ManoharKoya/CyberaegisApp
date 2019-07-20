@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -26,6 +27,7 @@ public class OnlineCourses extends AppCompatActivity
     private   RecyclerView recyclerView;
     private Course_Adapter adapter;
     private List<Course_row_parts> course_list;
+    CardView cv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +67,16 @@ public class OnlineCourses extends AppCompatActivity
         course_list.add(new com.example.cyberaegisapp.Course_row_parts("SAP","The master data is used to create transactional data in SAP...",R.drawable.sap_mm));
         adapter=new Course_Adapter(this,course_list);
         recyclerView.setAdapter(adapter);
+
+//        cv=findViewById(R.id.cv);
+//        cv.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(v.getContext(),CourseDesc.class));
+//            }
+//        });
+
+
 
 
     }
@@ -125,4 +137,5 @@ public class OnlineCourses extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

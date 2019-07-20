@@ -17,9 +17,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".CourseDesc"
+            android:label="@string/title_activity_course_desc"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".AboutUs"
             android:label="@string/title_activity_about_us"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Enroll"
             android:label="@string/title_activity_enroll"
